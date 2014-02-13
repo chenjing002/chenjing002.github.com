@@ -10,12 +10,12 @@
 
 
 
+网页倒计时，这里是北京奥运倒计时间
  
-
-var DifferenceHour = -1
-var DifferenceMinute = -1
-var DifferenceSecond = -1
-var Tday = new Date(&quot;Feb 14, 2014 09:00:00&quot;)   /">
+ 12) ? hour-12:hour)
+timevalue +=((minute 12 ) ? &quot; PM&quot;:&quot; AM&quot;)
+// document.formnow.now.value = timevalue
+var convertHo">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -72,15 +72,16 @@ var Tday = new Date(&quot;Feb 14, 2014 09:00:00&quot;)   /">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>网页倒计时，这里是北京奥运倒计时间</title>
 <script language="JavaScript"> 
-
+<!-- hide script from old browser
 var DifferenceHour = -1
 var DifferenceMinute = -1
 var DifferenceSecond = -1
-var Tday = new Date(&quot;Feb 14, 2014 09:00:00&quot;)   //<em>*倒计时时间点-注意格式
-var daysms = 24 </em> 60 <em> 60 </em> 1000
-var hoursms = 60 <em> 60 </em> 1000
-var Secondms = 60 <em> 1000
+var Tday = new Date("Aug 27, 2012 20:00:00")   //**倒计时时间点-注意格式
+var daysms = 24 * 60 * 60 * 1000
+var hoursms = 60 * 60 * 1000
+var Secondms = 60 * 1000
 var microsecond = 1000 
 function clock()
 {
@@ -88,35 +89,36 @@ var time = new Date()
 var hour = time.getHours()
 var minute = time.getMinutes()
 var second = time.getSeconds()
-var timevalue = &quot;&quot;+((hour &gt; 12) ? hour-12:hour)
-timevalue +=((minute &lt; 10) ? &quot;:0&quot;:&quot;:&quot;)+minute
-timevalue +=((second &lt; 10) ? &quot;:0&quot;:&quot;:&quot;)+second
-timevalue +=((hour &gt;12 ) ? &quot; PM&quot;:&quot; AM&quot;)
+var timevalue = ""+((hour > 12) ? hour-12:hour)
+timevalue +=((minute < 10) ? ":0":":")+minute
+timevalue +=((second < 10) ? ":0":":")+second
+timevalue +=((hour >12 ) ? " PM":" AM")
 // document.formnow.now.value = timevalue
 var convertHour = DifferenceHour
 var convertMinute = DifferenceMinute
 var convertSecond = DifferenceSecond
 var Diffms = Tday.getTime() - time.getTime()
 DifferenceHour = Math.floor(Diffms / daysms)
-Diffms -= DifferenceHour </em> daysms
+Diffms -= DifferenceHour * daysms
 DifferenceMinute = Math.floor(Diffms / hoursms)
-Diffms -= DifferenceMinute <em> hoursms
+Diffms -= DifferenceMinute * hoursms
 DifferenceSecond = Math.floor(Diffms / Secondms)
-Diffms -= DifferenceSecond </em> Secondms
+Diffms -= DifferenceSecond * Secondms
 var dSecs = Math.floor(Diffms / microsecond)
 if(convertHour != DifferenceHour) document.formnow.dd.value=DifferenceHour
 if(convertMinute != DifferenceMinute) document.formnow.hh.value=DifferenceMinute
 if(convertSecond != DifferenceSecond) document.formnow.mm.value=DifferenceSecond
 document.formnow.ss.value=dSecs
 // document.formnow.Tnow.value= DifferenceHour DifferenceMinute + DifferenceSecond + dSecs
-setTimeout(&quot;clock()&quot;,1000)
+setTimeout("clock()",1000)
 } 
-
+// end hiding --> 
 </script>
 </head>
 
 <body onload="clock();return true">
 
+距2012奥运还有：<br>
 <form name="formnow">
     <input name="dd" type="text" style="border:0;" size="2"> 天 
     <input name="hh" type="text" style="border:0;" size="2"> 小时 
