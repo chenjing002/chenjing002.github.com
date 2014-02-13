@@ -42,6 +42,94 @@
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-02-13T00:00:00.000Z"><a href="/2014/02/13/一路顺风/">2月 13 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/02/13/一路顺风/">邱曉晖 ·一路顺</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="-"><em>距大陆无美女还有：</em></h3>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script language="JavaScript"> 
+
+var DifferenceHour = -1
+var DifferenceMinute = -1
+var DifferenceSecond = -1
+var Tday = new Date(&quot;Feb 14, 2014 09:00:00&quot;)   //<em>*倒计时时间点-注意格式
+var daysms = 24 </em> 60 <em> 60 </em> 1000
+var hoursms = 60 <em> 60 </em> 1000
+var Secondms = 60 <em> 1000
+var microsecond = 1000 
+function clock()
+{
+var time = new Date()
+var hour = time.getHours()
+var minute = time.getMinutes()
+var second = time.getSeconds()
+var timevalue = &quot;&quot;+((hour &gt; 12) ? hour-12:hour)
+timevalue +=((minute &lt; 10) ? &quot;:0&quot;:&quot;:&quot;)+minute
+timevalue +=((second &lt; 10) ? &quot;:0&quot;:&quot;:&quot;)+second
+timevalue +=((hour &gt;12 ) ? &quot; PM&quot;:&quot; AM&quot;)
+// document.formnow.now.value = timevalue
+var convertHour = DifferenceHour
+var convertMinute = DifferenceMinute
+var convertSecond = DifferenceSecond
+var Diffms = Tday.getTime() - time.getTime()
+DifferenceHour = Math.floor(Diffms / daysms)
+Diffms -= DifferenceHour </em> daysms
+DifferenceMinute = Math.floor(Diffms / hoursms)
+Diffms -= DifferenceMinute <em> hoursms
+DifferenceSecond = Math.floor(Diffms / Secondms)
+Diffms -= DifferenceSecond </em> Secondms
+var dSecs = Math.floor(Diffms / microsecond)
+if(convertHour != DifferenceHour) document.formnow.dd.value=DifferenceHour
+if(convertMinute != DifferenceMinute) document.formnow.hh.value=DifferenceMinute
+if(convertSecond != DifferenceSecond) document.formnow.mm.value=DifferenceSecond
+document.formnow.ss.value=dSecs
+// document.formnow.Tnow.value= DifferenceHour DifferenceMinute + DifferenceSecond + dSecs
+setTimeout(&quot;clock()&quot;,1000)
+} 
+
+</script>
+</head>
+
+<body onload="clock();return true">
+
+<form name="formnow">
+    <input name="dd" type="text" style="border:0;" size="2"> 天 
+    <input name="hh" type="text" style="border:0;" size="2"> 小时 
+    <input name="mm" type="text" style="border:0;" size="2"> 分 
+    <input name="ss" type="text" style="border:0;" size="2"> 秒 
+</form>
+</body>
+</html>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="photo">
   
   <div class="post-content">
@@ -164,7 +252,7 @@
   <h3 class="title">标签</h3>
   <ul class="entry">
   
-    <li><a href="/tags/zjut/">zjut</a><small>1</small></li>
+    <li><a href="/tags/zjut/">zjut</a><small>2</small></li>
   
     <li><a href="/tags/诸暨/">诸暨</a><small>1</small></li>
   
